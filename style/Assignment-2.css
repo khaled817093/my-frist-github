@@ -383,12 +383,10 @@ body{
     color: #ffffffba;
 }
 @media screen and (max-width: 576px) {
-    .contenar{
-
-    }
     .benar{
         width: 440px;
         height: 466px;
+        padding: 10px;
     }
 }
 
