@@ -148,10 +148,10 @@ body{
     background-color: #351165;
 }
 .tech-wave h1{
-    background: none;
     color: #FFFFFF;
     text-align: center;
-    grid-area: titel;
+    margin-bottom: 40px;
+
 
 }
 #headphone{
@@ -237,13 +237,12 @@ body{
 #headphone, #rich, #exclusive, #global, #mobail p{
     color: #ffffffba;
 }
-.tech-wave{
+.tech-wave-grid{
     gap: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: 
-    "titel titel titel"
     "headphone mobail mobail "
     " headphone global global"
     "exclusive exclusive rich";
@@ -369,9 +368,10 @@ body{
     color: #ffffffba;
 }
 .icon-ber{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
     justify-content: center;
-    align-items:flex-start;
+    align-items: center;
     gap: 40px;
     margin-bottom: 40px;
 }
@@ -382,11 +382,122 @@ body{
 .foot p{
     color: #ffffffba;
 }
-@media screen and (max-width: 576px) {
-    /* .benar{
-        width: 440px;
-        height: 466px;
-        padding: 10px;
-    } */
-}
 
+.hiad{
+    display: none;
+}
+@media screen and (max-width:576px) {
+    .tech-wave {
+    margin-top: 30px;
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+
+}
+    .tech-wave-grid {
+    margin-top: 30px;
+    height: auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "headphone"
+    "mobail"
+    "global"
+    "exclusive"
+    " rich";
+    }
+#headphone {
+    background-color: #250D44;
+    padding: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+}
+    #mobail {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+
+}
+    #global {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+    #exclusive {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+    #rich {
+    padding: 20px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+    .tech-wave h1 {
+        font-size: 30px;
+    margin-bottom: 12px;
+
+    }
+    .Featured-titel {
+        margin-top: 10px;
+    }
+    .Featured {
+        display: flex;
+        flex-direction: column;
+    }   
+    .card {
+    margin-top: 10px;
+    max-width: 95%;
+    height: auto;
+    border-radius: 10px;;
+    }
+    .meet {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .meet-titel {
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .meet-conten {
+        width: 95%;
+        height: auto;
+        flex-direction: column;
+        text-align: center;
+    
+    }
+    .meet-conten h2 {
+        width: 100%;
+        color: #FFFFFF;
+        font-size: 10px;
+    }
+    .tech {
+    background-image: url(../assets/footer-bg.png);
+    height: auto;
+    background-size: cover;
+    padding: 10px;
+}
+   
+    .tech-content h1 {
+    font-size: 36px;
+    line-height: 1.2;
+    }
+    .icon-ber {
+
+    display: grid;
+    grid-template-columns: repeat(2, 90px);
+    justify-content: center;
+    align-items: center;
+    }
+    .foot{
+    text-align: center;
+    font-size: 10px;
+    }
+}
