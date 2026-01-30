@@ -16,6 +16,13 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 30px 200px;
+    border: 1px solid #351165;
+}
+.navber{
+    cursor: pointer;
+}
+.img{
+    display: none;
 }
 .span1{
     color: #FFFFFF;
@@ -33,10 +40,17 @@ body{
     text-decoration: none;
     margin-right: 32px;
 }
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .btn{
     border: none;
-    padding: 12px 24px;
+    padding: 13px 25px;
     border-radius: 10000px;
+    color: #FFFFFF;
+    cursor: pointer;
     background:linear-gradient(60deg, rgb(225, 225, 23), rgb(225, 23, 225));
 }
 .btn img{
@@ -46,23 +60,33 @@ body{
 .benar{
     max-width: 100%;
     height: 760px;
-    padding: 101px 525px;
+    padding: 60px 20px;
     background-image: url(../assets/hero-bg.png);
     background-size: cover;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .benar-img{
-  position: relative;
-  
-  margin: 0;
-  bottom: 100px;
-  text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.benar-img img{
+    max-width: 350px;
+    width: 100%;
+    height: auto;
 }
 .benar-img .new{
-    position: relative;
-    top: 100px;    
-    right: 10px; 
-    left: 110px;
+    position: absolute;
+    top: 0px;    
+    right: 20px; 
+    z-index: 10;
+    cursor: pointer;
 }
 .benar-img2{
     position: absolute;
@@ -70,37 +94,69 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.benar-img2 img{
+    max-width: 120px;
+}
 .benar-content{
     text-align: center;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px;
 }
 .benar-content h1{
     color: #FFFFFF;
     font-size: 60px;
     font-weight: extra-bold;
-    margin-top: 40px;
+    margin-top: 20px;
 }
-.benar-content {
-    margin-top: 10px;
+.btn, .btn-2, .card-item{
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn:hover, .btn-2:hover, #headphone:hover, #mobail:hover, #global:hover, #exclusive:hover, #rich:hover, .card:hover{
+    transform: translateY(-5px) ; 
+    box-shadow: 0 10px 20px rgba(228, 103, 103, 0.3);
+}
+.new:hover{
+    transform: translateY(-5px) ; 
 }
 .benar-content .btn-2{
+    justify-content: center;
     margin-left: 10px;
-    padding: 13px 20px;
+    padding: 13px 25px;
     border: 1px solid #00FF88;
     color: #00FF88;
     border-radius: 10000px;
     background: none;
+    cursor: pointer;
+
+}
+
+
+.benar-content p{
+    color: #ffffffba;
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+.div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+.btn img, .btn-2 img{
+    margin: 0 4px;
+    width: 20px;
+    height: auto;
 }
 .btn, .btn-2{
     margin-top: 24px;
 }
-.benar-content p{
-    color: #ffffffba;
-    margin-top: 10px;
-}
+
 .about{
     text-align: center;
     display: flex;
@@ -130,12 +186,21 @@ body{
 .count{
     max-width: 240px;
     height: 94px;
+    margin-bottom: 16px;
 }
 .count h1{
     font-size: 48px;
     font-weight: black;
     color: #00FF88;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.count h1 i{
+    width: 0px;
+    height: auto;
+    display: inline-block;
 }
 .count h5{
     color: #ffffffd7;
@@ -151,8 +216,9 @@ body{
     color: #FFFFFF;
     text-align: center;
     margin-bottom: 40px;
-
-
+}
+.color i{
+    color: #00FF88;
 }
 #headphone{
     background-color: #250D44;
@@ -246,6 +312,7 @@ body{
     "headphone mobail mobail "
     " headphone global global"
     "exclusive exclusive rich";
+    cursor: pointer;
 
 }
 .Featured{
@@ -312,8 +379,6 @@ body{
     margin: 0 auto;
     
 }
-
-
 .meet-conten .host{
     width: 200PX;
     height: 200px;
@@ -343,6 +408,7 @@ body{
     border-radius: 50%;
     padding: 6px;
     margin-top: 16px;
+    cursor: pointer;
 
     
 }
@@ -360,6 +426,11 @@ body{
     text-align: center;
     margin-bottom: 10px;
 }
+.icon-tech h3{
+    font-size: 16px;
+    gap: 20px;
+    cursor: pointer;
+}
 .icon-tech{
     display: flex;
     justify-content: center;
@@ -372,7 +443,7 @@ body{
     grid-template-columns: repeat(4, 150px);
     justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 20px;
     margin-bottom: 40px;
 }
 .foot{
@@ -387,62 +458,137 @@ body{
     display: none;
 }
 @media screen and (max-width:576px) {
-    .tech-wave {
-    margin-top: 30px;
-    max-width: 100%;
-    height: auto;
-    padding: 10px;
-
-}
-    .tech-wave-grid {
-    margin-top: 30px;
-    height: auto;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-    "headphone"
-    "mobail"
-    "global"
-    "exclusive"
-    " rich";
+    .contenar{
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
     }
-#headphone {
-    background-color: #250D44;
-    padding: 20px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
+    .img {
+        margin-left: 200px;
+        display: block;
+        cursor: pointer;
+    }
+    .img:hover{
+        transform: translateY(-+5px) ; 
+        box-shadow: 0 10px 20px rgb(31, 227, 54);
+    }
 
-}
+    .contenar ul {
+        display: none;
+    }
+    .flex .btn{
+        display: none;
+    }
+
+    .benar { 
+        max-width: 100%; 
+        height: auto; 
+        padding: 40px 20px; 
+        background-size: cover; 
+    } 
+    .benar-img {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        top: 70px;
+    }
+    .benar-img .new {
+        width: 70px;
+        height: 35px;
+        position: absolute;
+        right: 1px;
+    }
+    .benar-img2 img{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        transform: translate(-50%, -170%);
+    }
+    .benar h1, p{
+        margin-top: 40px;
+        width: 100%;
+    }
+    .content{ 
+        margin-top: 40px; 
+        display: grid; 
+        grid-template-columns: 
+        repeat(2, 180px); gap: 40px; 
+        padding: 20px;
+    } 
+    .benar-content h1 { 
+        color: #FFFFFF;
+        font-size: 42px; 
+        margin-top: 30px; 
+    } .about-content h1{ 
+        margin-top: 30px; 
+        font-size: 32px; 
+    } 
+    .about-content p, p{
+        margin-top: 16px; 
+        margin-bottom: 40px; 
+        max-width: 100%; 
+    }
+    .tech-wave { 
+        margin-top: 30px;
+         max-width: 100%; 
+         height: auto; 
+         padding: 10px;
+    }
+    .tech-wave {
+        margin-top: 30px;
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+
+    }
+    .tech-wave-grid {
+        margin-top: 30px;
+        height: auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "headphone"
+        "mobail"
+        "global"
+        "exclusive"
+        " rich";
+    }
+    #headphone {
+        background-color: #250D44;
+        padding: 20px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 20px;
+
+    }
     #mobail {
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-
-}
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
     #global {
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
     #exclusive {
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
     #rich {
-    padding: 20px;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
+        padding: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
     .tech-wave h1 {
         font-size: 30px;
-    margin-bottom: 12px;
+        margin-bottom: 12px;
 
     }
     .Featured-titel {
@@ -453,10 +599,10 @@ body{
         flex-direction: column;
     }   
     .card {
-    margin-top: 10px;
-    max-width: 95%;
-    height: auto;
-    border-radius: 10px;;
+        margin-top: 10px;
+        max-width: 95%;
+        height: auto;
+        border-radius: 10px;;
     }
     .meet {
         margin-top: 30px;
@@ -479,25 +625,28 @@ body{
         font-size: 10px;
     }
     .tech {
-    background-image: url(../assets/footer-bg.png);
-    height: auto;
-    background-size: cover;
-    padding: 10px;
-}
+        background-image: url(../assets/footer-bg.png);
+        height: auto;
+        background-size: cover;
+        padding: 10px;
+    }
    
     .tech-content h1 {
-    font-size: 36px;
-    line-height: 1.2;
+        font-size: 36px;
+        line-height: 1.2;
+    }
+    .icon-tech h3{
+        font-size: 10px;
+        gap: 10px;
     }
     .icon-ber {
-
-    display: grid;
-    grid-template-columns: repeat(2, 90px);
-    justify-content: center;
-    align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 90px);
+        justify-content: center;
+        align-items: center;
     }
     .foot{
-    text-align: center;
-    font-size: 10px;
+        text-align: center;
+        font-size: 10px;
     }
 }
